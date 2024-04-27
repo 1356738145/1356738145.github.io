@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Earthquakes in 2023</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://js.arcgis.com/4.22/esri/themes/light/main.css" />
+    <script src="https://js.arcgis.com/4.22/"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <div id="view-container"></div>
+    <h1 class="title">Major earthquakes in 2023</h1>
+    <div id="details">
+      
+      <p>
+        <button id="toggle-exaggeration">
+          Toggle exaggeration
+        </button>
+        to visualize the actual depth and the exaggerated depth. The list below displays the earthquakes with magnitude
+        higher than 7 in chronological order.
+      </p>
+      <div id="earthquake-list"></div>
+    </div>
+  </body>
+</html>

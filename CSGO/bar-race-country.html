@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- 引入 ECharts 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+</head>
+
+<body>
+    <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+    <div id="main" style="width: 1536px; height: 864px;"></div>
+    <script type="text/javascript">
+        // 初始化 ECharts 实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var yearList = ['2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015','2016','2017','2018','2019','2020','2021','2022','2023','2024'];
+        var gameList = ['csgo','apexlegends','pubg','fortnite','overwatch','EscapefromTarkov','DayZ','CallofDuty'];
+        var flagIcons = {
+            'usa': 'usa.png',
+            'chn': 'chn.png',
+            'jpn': 'jpn.png',
+            'deu': 'deu.png',
+            'gbr': 'gbr.png',
+            'fra': 'fra.png',
+            'ita': 'ita.png',
+            'ind': 'ind.png'                                
+        };
+        var option = {
+            timeline: {
+                axisType: 'category',
+                autoPlay: true,
+                playInterval: 1500,
+                data: yearList,
+                label: {
+                    fontSize: 18
+                }
+            },
+            baseOption: {
+                dataset: {
+                    source: [
+                        ['year','csgo','apexlegends','pubg','fortnite','overwatch','EscapefromTarkov','DayZ','CallofDuty'],
+                        ['2004',0.0,0.0,0.0,0.0,0.5,0.0,6.0,168],
+                        ['2005',0.0,0.0,0.0,0.0,0.5,0.0,6.0,147],
+                        ['2006',0.0,0.0,0.0,0.0,4.0,0.0,6.0,131],
+                        ['2007',0.5,0.0,0.0,0.0,5.0,0.0,6.0,162],
+                        ['2008',0.0,0.0,0.0,0.0,6.0,0.0,6.0,248],
+                        ['2009',0.0,0.0,0.0,0.0,6.0,0.0,6.0,263],
+                        ['2010',0.0,0.0,0.0,0.0,6.0,0.0,6.0,287],
+                        ['2011',2.5,0.0,0.0,1.0,6.0,0.0,6.0,267],
+                        ['2012',6.5,0.0,0.0,6.0,6.0,0.0,51.0,195],
+                        ['2013',8.5,0.5,0.0,6.0,6.0,0.0,58.0,184],
+                        ['2014',31.0,2.0,0.0,6.0,8.0,0.0,75.0,157],
+                        ['2015',108.0,2.5,1.5,6.0,18.0,1.0,33.0,134],
+                        ['2016',110.0,6.0,3.0,6.0,160.0,6.0,19.0,105],
+                        ['2017',87.0,3.5,50.0,42.0,143.0,8.0,12.0,99],
+                        ['2018',56.0,1.5,228.0,950.0,94.0,8.5,12.0,72],
+                        ['2019',49.0,61.5,298.0,693.0,60.0,7.5,15.0,96],
+                        ['2020',69.0,33.0,336.0,636.0,47.0,14.5,16.0,147],
+                        ['2021',56.0,33.0,229.0,436.0,32.0,11.5,14.0,93],
+                        ['2022',60.0,31.0,127.0,334.0,76.0,12.5,20.0,90],
+                        ['2023',71.0,16.0,97.0,362.0,49.0,9.5,21.0,86],
+                        ['2024',10.0,5.0,29.0,152.0,15.0,4.0,7.0,31]
+                    ]
+                },
+                title: {
+                    text: '2004年各FPS游戏搜索强度 (Google Trends)',
+                    left: 'center',
+                    textStyle: {
+                        fontSize: 24
+                    }
+                },
+                tooltip: {
+                    trigger: 'axis'
+                },
+                toolbox: {
+                    feature: {
+                        saveAsImage: {}
+                    }
+                },
+                legend: {},
+                grid: {
+                    left: '10%',
+                    bottom: '15%',
+                    containLabel: true
+                },
+                xAxis: [{
+                    type: 'category',
+                    data: gameList,
+                    axisPointer: {
+                        type: 'shadow'
+                    },
+                    axisLabel: {
+                        interval: 0,
+                        formatter: function (value) {
+                            return '{' + value + '| }\n{value|' + value + '}';
+                        },
+                        margin: 20,
+                        rich: {
+                            value: {
+                                lineHeight: 30,
+                                fontSize: 18,
+                                align: 'center'
+                            },
+                            csgo: {
+                                height: 40,
+                                align: 'center',
+                                backgroundColor: {
+                                    image: flagIcons.chn
+                                },
+                            },
+                            apexlegends: {
+                                height: 40,
+                                align: 'center',
+                                backgroundColor: {
+                                    image: flagIcons.usa
+                                }
+                            },
+                            pubg: {
+                                height: 40,
+                                align: 'center',
+                                backgroundColor: {
+                                    image: flagIcons.jpn
+                                }
+                            },
+                            fortnite: {
+                                height: 40,
+                                align: 'center',
+                                backgroundColor: {
+                                    image: flagIcons.deu
+                                }
+                            },
+                            overwatch: {
+                                height: 40,
+                                align: 'center',
+                                backgroundColor: {
+                                    image: flagIcons.gbr
+                                }
+                            },
+                            EscapefromTarkov: {
+                                height: 40,
+                                align: 'center',
+                                backgroundColor: {
+                                    image: flagIcons.fra
+                                }
+                            },
+                            DayZ: {
+                                height: 40,
+                                align: 'center',
+                                backgroundColor: {
+                                    image: flagIcons.ita
+                                }
+                            },
+                            CallofDuty: {
+                                height: 40,
+                                align: 'center',
+                                backgroundColor: {
+                                    image: flagIcons.ind
+                                }
+                            },
+                        }
+                    } 
+                }],
+                yAxis: [{ 
+                    name: '搜索强度 (Google Trends)',
+                    type: 'value',
+                    nameTextStyle: {
+                        fontSize: 18
+                    },
+                    axisLabel: {
+                        fontSize: 18
+                    }
+                }],
+                series: [{                
+                    type: 'bar',
+                    seriesLayoutBy: 'row',
+                    encode: {
+                        x: 'year',
+                        y: '2004'
+                    }
+                }]
+            },
+            options: []
+        };
+
+        // 生成年份对应的配置项
+        for (var n = 0; n < yearList.length; n++) {
+            option.options.push({
+                title: {
+                    show: true,
+                    text: yearList[n] + '年各FPS游戏搜索强度 (Google Trends)',
+                    left: 'center',
+                    textStyle: {
+                        fontSize: 24
+                    }
+                },
+                series: [{
+                    type: 'bar',
+                    seriesLayoutBy: 'row',
+                    encode: {
+                        x: 'year',
+                        y: yearList[n]
+                    },
+                    itemStyle: {
+                        color: '#f28500'
+                    }
+                }]
+            });
+        }
+
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

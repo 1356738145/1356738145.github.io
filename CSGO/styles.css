@@ -1,0 +1,166 @@
+#mainImage {
+  position: absolute; 
+  width: 1024px;
+  height: 1024px;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #ffffff;
+  box-shadow: outset 0px 0px 200px rgb(163, 163, 163);
+  animation: fadeIn 0.5s ease-out;
+  position: relative; /* 添加相对定位 */
+}
+
+.overlay-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1024px; /* 调整为和 #mainImage 相同的宽度 */
+  height: 1024px; /* 调整为和 #mainImage 相同的高度 */
+  transform: translate(-50%, -50%); /* 使用负的 margin 值进行居中对齐 */
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#imageContainer {
+  position: relative; /* 确保相对定位元素作为绝对定位元素的定位上下文 */
+}
+
+
+
+.container {
+    text-align: center;
+    margin-top: 20px;
+    position: relative; /* 确保容器作为绝对定位元素的定位上下文 */
+    
+    background-size: cover; /* 使背景图像覆盖整个容器 */
+  }
+  
+  .button {
+    margin: 10px;
+    padding: 8px 16px; /* 调整按钮内边距 */
+    font-size: 16px; /* 设置字体大小 */
+    border: 2px solid #000000; /* 添加边框 */
+    background-color: #ca5b00; /* 设置背景色 */
+    color: #ffffff; /* 设置文字颜色 */
+    cursor: pointer; /* 添加鼠标指针样式 */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* 添加过渡效果 */
+  }
+  
+  .button:hover {
+    background-color: #d30101; /* 鼠标悬停时背景色 */
+    color: #fffb02; /* 鼠标悬停时文字颜色 */
+    transform: scale(1.1); /* 鼠标悬停时放大按钮 */
+  }
+
+  .buttonGroup {
+    text-align: center; /* 水平居中按钮 */
+  }
+  
+  .buttonGroup .button {
+    margin: 10px; /* 调整按钮间距 */
+  }
+  
+
+  .overlay-image.show {
+    opacity: 1; /* 显示图像时透明度为1 */
+  }
+
+  .title1 {
+    font-size: 128px; /* 设置标题字体大小 */
+    font-weight: bold; /* 设置标题粗细 */
+    text-align: center; /* 居中标题文本 */
+    font-family: Arial, sans-serif; /* 设置字体 */
+    color: #FFF; /* 设置字体颜色为白色 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 添加阴影 */
+    animation: shadowEffect 1.5s ease-in-out infinite alternate; /* 添加动画 */
+  }
+  .title2 {
+    font-size: 48px; /* 设置标题字体大小 */
+    font-weight: bold; /* 设置标题粗细 */
+    height: 50px; /* 设置标题高度为 50px */
+    text-align: center; /* 居中标题文本 */
+    font-family: Arial, sans-serif; /* 设置字体 */
+    color: #000; /* 设置字体颜色为白色 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 添加阴影 */
+    animation: shadowEffect 1.5s ease-in-out infinite alternate; /* 添加动画 */
+  }
+
+  /* 定义阴影动画 */
+  @keyframes shadowEffect {
+    from {
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    to {
+      text-shadow: -2px -2px 4px rgba(0, 0, 0, 0.5);
+    }
+  }
+  
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px); /* Initial position above */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* Final position at default */
+    }
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+      transform: translateY(0); /* Initial position at default */
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-20px); /* Final position above */
+    }
+  }
+
+  .vis1 {
+    
+    width: 100%;
+    height: 2000px;
+    background-image: url('R.png'); /* 添加背景图像 */
+    background-size: cover; /* 调整背景图像大小以覆盖整个元素 */
+    overflow: auto; /* 或者使用其他适当的值 */
+  }
+  
+  .vis2 {
+    position: relative;
+    width: 100%;
+    height: 1280px;
+    background-color: #f0f0f0;
+  }
+
+  .snowflakes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allow clicks to pass through snowflakes */
+  }
+  
+  .snowflake {
+    position: absolute;
+    background: #fff; /* Snowflake color */
+    border-radius: 50%;
+    width: 5px; /* Snowflake size */
+    height: 5px;
+    animation: snowfall linear infinite;
+  }
+  
+  @keyframes snowfall {
+    0% {
+      transform: translateY(-10px) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(2000px) rotate(360deg); /* Snowfall to bottom */
+      opacity: 0; /* Fade out as it falls */
+    }
+  }
+

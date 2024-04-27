@@ -1,0 +1,158 @@
+<!--
+	此示例下载自 https://echarts.apache.org/examples/zh/editor.html?c=bar3d-simplex-noise&gl=1&theme=dark
+-->
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  <script type="text/javascript" src="https://cdn.staticfile.net/jquery/3.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/5.5.0/files/dist/echarts.min.js"></script>
+  
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/5.5.0/files/dist/extension/dataTool.min.js"></script>
+  -->
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts-gl/2/files/dist/echarts-gl.min.js"></script>
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts-stat/latest/files/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/4.9.0/files/map/js/china.js"></script>
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/4.9.0/files/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/5.5.0/files/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, 'dark', {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    $.getScript(
+      'https://fastly.jsdelivr.net/npm/simplex-noise@2.4.0/simplex-noise.js'
+    ).done(function () {
+
+      var data = [];
+      var valMin = Infinity;
+      var valMax = -Infinity;
+    
+      // 使用 fetch 方法读取 JSON 文件
+      fetch('data.json')
+        .then(response => response.json()) // 解析 JSON 数据
+        .then(jsonData => {
+          // 在这里可以处理解析后的 JSON 数据
+          jsonData.forEach(item => {
+            // 对每个 JSON 数据项进行处理，并生成适合的数据结构
+            var value = item.value; // 假设 JSON 数据中有一个名为 value 的字段
+            valMax = Math.max(valMax, value);
+            valMin = Math.min(valMin, value);
+            data.push([item.x, item.y, value]);
+          });
+    
+          // 输出 valMin 和 valMax
+          console.log(valMin, valMax); 
+    
+          // 设置图表选项并绘制图表
+          myChart.setOption({
+            visualMap: {
+              show: false,
+              min: 0,
+              max: 300,
+              inRange: {
+                color: [
+                  '#313695',
+                  '#4575b4',
+                  '#74add1',
+                  '#abd9e9',
+                  '#e0f3f8',
+                  '#ffffbf',
+                  '#fee090',
+                  '#fdae61',
+                  '#f46d43',
+                  '#d73027',
+                  '#a50026'
+                ]
+              }
+            },
+            xAxis3D: {
+              type: 'value',
+              max: 31,
+              min: 0,
+              interval: 2  // 设置刻度间隔为2
+            },
+            yAxis3D: {
+              type: 'value',
+              max: 12,
+              min: 0,
+              interval: 1
+            },
+            zAxis3D: {
+              type: 'value',
+              max: 300,
+              min: 0
+            },
+            grid3D: {
+              axisLine: {
+                lineStyle: { color: '#fff' }
+              },
+              axisPointer: {
+                lineStyle: { color: '#fff' }
+              },
+              viewControl: {
+                // autoRotate: true
+              },
+              light: {
+                main: {
+                  shadow: true,
+                  quality: 'ultra',
+                  intensity: 1
+                }
+              }
+            },
+            tooltip: {
+              formatter: function (params) {
+                return '日: ' + params.value[0] + '<br>'
+                     + '月: ' + params.value[1] + '<br>'
+                     + '震级总和: ' + params.value[2];
+              }
+            },
+            series: [
+              {
+                type: 'bar3D',
+                data: data,
+                shading: 'lambert',
+                label: {
+                  formatter: function (param) {
+                    return param.value[2].toFixed(1);
+                  }
+                }
+              }
+            ]
+          });
+        })
+        .catch(error => {
+          console.error('Error fetching JSON:', error);
+        });
+    
+    });
+    
+    // 注意这里的代码应该在图表库的相关代码之后，确保 myChart 对象已经创建
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+    
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>

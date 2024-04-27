@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: auto; 
+    height: 2160px; 
+  }
+
+  #fluid-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 1280px;
+    z-index: -1; /* 将流体背景置于页面底层 */
+    pointer-events: none; /* 使流体背景不影响页面交互 */
+  }
+  /* 标题样式 */
+  h1 {
+    text-align: center;
+    font-size: 32px; /* 调整字体大小 */
+    margin-top: 30px; /* 上边距 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+  }
+  h2 {
+    width:60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 18px; /* 调整字体大小 */
+    margin-top: 30px; /* 上边距 */
+  }
+  
+  #container {
+    width: 80%; /* 设置宽度 */
+    height: 1080px; /* 设置高度为视口高度的 80% */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(240, 240, 240, 0.8); 
+    margin: auto; /* 上下左右居中 */
+    display: flex; /* 使用 flex 布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+  }
+
+
+    .content {
+      height: 100%;
+      flex: 1; 
+      
+    }
+

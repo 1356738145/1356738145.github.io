@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ECharts 示例</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.3.2/dist/echarts.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts/map/js/world.js"></script>
+    <style>
+        /* 设置父容器样式，实现垂直和水平居中 */
+        .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* 让父容器铺满整个视口高度 */
+            background-color: #f0f0f0; /* 可选：设置背景颜色 */
+        }
+
+        /* 设置子元素样式，使其在父容器中垂直和水平居中 */
+        .chart-container {
+            width: 800px; /* 调整图表容器的宽度 */
+            height: 600px; /* 调整图表容器的高度 */
+            border: 1px solid #ccc; /* 边框样式 */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 阴影样式 */
+            border-radius: 10px; /* 圆角样式 */
+            background-color: #fff; /* 背景颜色 */
+            /* 这里可以添加其他样式，例如边框、阴影等 */
+        }   
+    </style>
+</head>
+<body>
+    <div class="center-container">
+        <div id="chart-container" class="chart-container"></div>
+    </div>
+
+    <!-- 引入 ECharts 和地图文件 -->
+
+    <script type="text/javascript">
+        var chartContainer = document.getElementById('chart-container');
+        var chart = echarts.init(chartContainer);
+        var option = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+    ],
+    "series": [
+        {
+            "type": "map",
+            "name": "\u56fd\u5bb6\u6218\u961f\u4e2a\u6570",
+            "label": {
+                "show": false,
+                "margin": 8
+            },
+            "map": "world",
+            "data": [
+                {
+                    "name": "Albania",
+                    "value": 1
+                },
+                {
+                    "name": "Argentina",
+                    "value": 4
+                },
+                {
+                    "name": "Asia",
+                    "value": 1
+                },
+                {
+                    "name": "Australia",
+                    "value": 27
+                },
+                {
+                    "name": "Belarus",
+                    "value": 2
+                },
+                {
+                    "name": "Belgium",
+                    "value": 2
+                },
+                {
+                    "name": "Brazil",
+                    "value": 29
+                },
+                {
+                    "name": "Bulgaria",
+                    "value": 10
+                },
+                {
+                    "name": "CIS",
+                    "value": 3
+                },
+                {
+                    "name": "Canada",
+                    "value": 6
+                },
+                {
+                    "name": "China",
+                    "value": 16
+                },
+                {
+                    "name": "Colombia",
+                    "value": 2
+                },
+                {
+                    "name": "Czech Republic",
+                    "value": 2
+                },
+                {
+                    "name": "Denmark",
+                    "value": 19
+                },
+                {
+                    "name": "Estonia",
+                    "value": 1
+                },
+                {
+                    "name": "Europe",
+                    "value": 13
+                },
+                {
+                    "name": "Finland",
+                    "value": 8
+                },
+                {
+                    "name": "France",
+                    "value": 15
+                },
+                {
+                    "name": "Germany",
+                    "value": 12
+                },
+                {
+                    "name": "Hungary",
+                    "value": 2
+                },
+                {
+                    "name": "India",
+                    "value": 1
+                },
+                {
+                    "name": "Indonesia",
+                    "value": 3
+                },
+                {
+                    "name": "Japan",
+                    "value": 1
+                },
+                {
+                    "name": "Kazakhstan",
+                    "value": 5
+                },
+                {
+                    "name": "Korea",
+                    "value": 3
+                },
+                {
+                    "name": "Lithuania",
+                    "value": 1
+                },
+                {
+                    "name": "Malaysia",
+                    "value": 2
+                },
+                {
+                    "name": "Mongolia",
+                    "value": 4
+                },
+                {
+                    "name": "Netherlands",
+                    "value": 1
+                },
+                {
+                    "name": "New Zealand",
+                    "value": 1
+                },
+                {
+                    "name": "North America",
+                    "value": 3
+                },
+                {
+                    "name": "Norway",
+                    "value": 5
+                },
+                {
+                    "name": "Oceania",
+                    "value": 1
+                },
+                {
+                    "name": "Philippines",
+                    "value": 3
+                },
+                {
+                    "name": "Poland",
+                    "value": 18
+                },
+                {
+                    "name": "Portugal",
+                    "value": 5
+                },
+                {
+                    "name": "Romania",
+                    "value": 2
+                },
+                {
+                    "name": "Russia",
+                    "value": 26
+                },
+                {
+                    "name": "Serbia",
+                    "value": 5
+                },
+                {
+                    "name": "Singapore",
+                    "value": 3
+                },
+                {
+                    "name": "Slovakia",
+                    "value": 2
+                },
+                {
+                    "name": "South Africa",
+                    "value": 2
+                },
+                {
+                    "name": "South America",
+                    "value": 1
+                },
+                {
+                    "name": "Spain",
+                    "value": 2
+                },
+                {
+                    "name": "Sweden",
+                    "value": 21
+                },
+                {
+                    "name": "Thailand",
+                    "value": 6
+                },
+                {
+                    "name": "Turkey",
+                    "value": 4
+                },
+                {
+                    "name": "Ukraine",
+                    "value": 7
+                },
+                {
+                    "name": "United Arab Emirates",
+                    "value": 1
+                },
+                {
+                    "name": "United Kingdom",
+                    "value": 3
+                },
+                {
+                    "name": "United States",
+                    "value": 44
+                }
+            ],
+            "roam": true,
+            "aspectScale": 0.75,
+            "nameProperty": "name",
+            "selectedMode": false,
+            "zoom": 1,
+            "zlevel": 0,
+            "z": 2,
+            "seriesLayoutBy": "column",
+            "datasetIndex": 0,
+            "mapValueCalculation": "sum",
+            "showLegendSymbol": true,
+            "emphasis": {},
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "\u56fd\u5bb6\u6218\u961f\u4e2a\u6570"
+            ],
+            "bottom": 10,
+            "selected": {},
+            "show": true,
+            
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "title": [
+        {
+            "show": true,
+            "text": "\u56fd\u5bb6\u6218\u961f\u4e2a\u6570",
+            "target": "blank",
+            "subtarget": "blank",
+            "left": "center",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ],
+    "visualMap": {
+        "show": true,
+        "type": "piecewise",
+        "min": 0,
+        "max": 44,
+        "text": [
+            "High",
+            "Low"
+        ],
+        "inRange": {
+            "color": [
+                "#E5E5E5",
+                "#999999"
+            ]
+        },
+        "calculable": true,
+        "inverse": false,
+        "splitNumber": 5,
+        "hoverLink": true,
+        "orient": "vertical",
+        "padding": 5,
+        "showLabel": true,
+        "itemWidth": 20,
+        "itemHeight": 20,
+        "borderWidth": 0,
+        "pieces": [
+            {
+                "min": 0,
+                "max": 4,
+                "color": "#DAE7B8"
+            },
+            {
+                "min": 5,
+                "max": 9,
+                "color": "#DAFFB8"
+            },
+            {
+                "min": 10,
+                "max": 14,
+                "color": "#FFF3B1"
+            },
+            {
+                "min": 15,
+                "max": 19,
+                "color": "#FFEB7B"
+            },
+            {
+                "min": 20,
+                "max": 24,
+                "color": "#FFD34E"
+            },
+            {
+                "min": 25,
+                "max": 29,
+                "color": "#FFA940"
+            },
+            {
+                "min": 30,
+                "max": 34,
+                "color": "#FF7A45"
+            },
+            {
+                "min": 35,
+                "max": 39,
+                "color": "#E35252"
+            },
+            {
+                "min": 40,
+                "max": 44,
+                "color": "#E35252"
+            },
+            {
+                "min": 45,
+                "max": 49,
+                "color": "#E35252"
+            }
+        ]
+    }
+};
+chart.setOption(option);
+    </script>
+</body>
+</html>

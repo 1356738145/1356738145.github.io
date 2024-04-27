@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CS:GO HeatMap</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+<body>
+<div class = "vis1">
+  <div class="snowflakes" aria-hidden="true">
+    <div class="snowflake"></div>
+  </div>
+  <h1 class="title1">CS:GO数据可视化项目</h1>
+</div>
+
+<div class = "force">
+  <h1 class="title2">主流FPS游戏Google搜索</h1>
+    <head>
+    <meta charset="utf-8">
+    <!-- 引入 ECharts 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+    </head>
+    <div id="main" style="width: 100%; height: 1080px;justify-content: center; align-items: center;">
+      <h1>
+        <center>CS:GO搜索强度</center>
+      </h1>
+    </div>
+    <script type="text/javascript">
+        // 初始化 ECharts 实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var yearList = ['2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015','2016','2017','2018','2019','2020','2021','2022','2023','2024'];
+        var gameList = ['csgo','apexlegends','pubg','fortnite','overwatch','EscapefromTarkov','DayZ','CallofDuty'];
+        var flagIcons = {
+            'usa': 'usa.png',
+            'chn': 'chn.png',
+            'jpn': 'jpn.png',
+            'deu': 'deu.png',
+            'gbr': 'gbr.png',
+            'fra': 'fra.png',
+            'ita': 'ita.png',
+            'ind': 'ind.png'                                
+        };
+        var option = {
+            timeline: {
+                axisType: 'category',
+                autoPlay: true,
+                playInterval: 1500,
+                data: yearList,
+                label: {
+                    fontSize: 18
+                }
+            },
+            baseOption: {
+                dataset: {
+                    source: [
+                        ['year','csgo','apexlegends','pubg','fortnite','overwatch','EscapefromTarkov','DayZ','CallofDuty'],
+                        ['2004',0.0,0.0,0.0,0.0,0.5,0.0,6.0,168],
+                        ['2005',0.0,0.0,0.0,0.0,0.5,0.0,6.0,147],
+                        ['2006',0.0,0.0,0.0,0.0,4.0,0.0,6.0,131],
+                        ['2007',0.5,0.0,0.0,0.0,5.0,0.0,6.0,162],
+                        ['2008',0.0,0.0,0.0,0.0,6.0,0.0,6.0,248],
+                        ['2009',0.0,0.0,0.0,0.0,6.0,0.0,6.0,263],
+                        ['2010',0.0,0.0,0.0,0.0,6.0,0.0,6.0,287],
+                        ['2011',2.5,0.0,0.0,1.0,6.0,0.0,6.0,267],
+                        ['2012',6.5,0.0,0.0,6.0,6.0,0.0,51.0,195],
+                        ['2013',8.5,0.5,0.0,6.0,6.0,0.0,58.0,184],
+                        ['2014',31.0,2.0,0.0,6.0,8.0,0.0,75.0,157],
+                        ['2015',108.0,2.5,1.5,6.0,18.0,1.0,33.0,134],
+                        ['2016',110.0,6.0,3.0,6.0,160.0,6.0,19.0,105],
+                        ['2017',87.0,3.5,50.0,42.0,143.0,8.0,12.0,99],
+                        ['2018',56.0,1.5,228.0,950.0,94.0,8.5,12.0,72],
+                        ['2019',49.0,61.5,298.0,693.0,60.0,7.5,15.0,96],
+                        ['2020',69.0,33.0,336.0,636.0,47.0,14.5,16.0,147],
+                        ['2021',56.0,33.0,229.0,436.0,32.0,11.5,14.0,93],
+                        ['2022',60.0,31.0,127.0,334.0,76.0,12.5,20.0,90],
+                        ['2023',71.0,16.0,97.0,362.0,49.0,9.5,21.0,86],
+                        ['2024',10.0,5.0,29.0,152.0,15.0,4.0,7.0,31]
+                    ]
+                },
+                title: {
+                    text: '2004年各FPS游戏搜索强度 (Google Trends)',
+                    left: 'center',
+                    textStyle: {
+                        fontSize: 24
+                    }
+                },
+                tooltip: {
+                    trigger: 'axis'
+                },
+                toolbox: {
+                    feature: {
+                        saveAsImage: {}
+                    }
+                },
+                legend: {},
+                grid: {
+                    left: '10%',
+                    bottom: '15%',
+                    containLabel: true
+                },
+                xAxis: [{
+                    type: 'category',
+                    data: gameList,
+                    axisPointer: {
+                        type: 'shadow'
+                    },
+                    axisLabel: {
+                        interval: 0,
+                        formatter: function (value) {
+                            return '{' + value + '| }\n{value|' + value + '}';
+                        },
+                        margin: 20,
+                        rich: {
+                            value: {
+                                lineHeight: 30,
+                                fontSize: 18,
+                                align: 'center'
+                            },
+                            csgo: {
+                                height: 40,
+                                align: 'center',
+                                backgroundColor: {
+                                    image: flagIcons.chn
+                                },
+                            },
+                            apexlegends: {
+                                height: 40,
+                                align: 'center',
+                                backgroundColor: {
+                                    image: flagIcons.usa
+                                }
+                            },
+                            pubg: {
+                                height: 40,
+                                align: 'center',
+                                backgroundColor: {
+                                    image: flagIcons.jpn
+                                }
+                            },
+                            fortnite: {
+                                height: 40,
+                                align: 'center',
+                                backgroundColor: {
+                                    image: flagIcons.deu
+                                }
+                            },
+                            overwatch: {
+                                height: 40,
+                                align: 'center',
+                                backgroundColor: {
+                                    image: flagIcons.gbr
+                                }
+                            },
+                            EscapefromTarkov: {
+                                height: 40,
+                                align: 'center',
+                                backgroundColor: {
+                                    image: flagIcons.fra
+                                }
+                            },
+                            DayZ: {
+                                height: 40,
+                                align: 'center',
+                                backgroundColor: {
+                                    image: flagIcons.ita
+                                }
+                            },
+                            CallofDuty: {
+                                height: 40,
+                                align: 'center',
+                                backgroundColor: {
+                                    image: flagIcons.ind
+                                }
+                            },
+                        }
+                    } 
+                }],
+                yAxis: [{ 
+                    name: '搜索强度 (Google Trends)',
+                    type: 'value',
+                    nameTextStyle: {
+                        fontSize: 18
+                    },
+                    axisLabel: {
+                        fontSize: 18
+                    }
+                }],
+                series: [{                
+                    type: 'bar',
+                    seriesLayoutBy: 'row',
+                    encode: {
+                        x: 'year',
+                        y: '2004'
+                    }
+                }]
+            },
+            options: []
+        };
+
+        // 生成年份对应的配置项
+        for (var n = 0; n < yearList.length; n++) {
+            option.options.push({
+                title: {
+                    show: true,
+                    text: yearList[n] + '年各FPS游戏搜索强度 (Google Trends)',
+                    left: 'center',
+                    textStyle: {
+                        fontSize: 24
+                    }
+                },
+                series: [{
+                    type: 'bar',
+                    seriesLayoutBy: 'row',
+                    encode: {
+                        x: 'year',
+                        y: yearList[n]
+                    },
+                    itemStyle: {
+                        color: '#f28500'
+                    }
+                }]
+            });
+        }
+
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+</div>
+
+<div class = "map">
+  <h1 class="title2">CSGO各国战队个数</h1>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.3.2/dist/echarts.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/echarts/map/js/world.js"></script>
+<style>
+  
+  .center-container {
+      margin:auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0; /* 可选：设置背景颜色 */
+  }
+
+  /* 设置子元素样式，使其在父容器中垂直和水平居中 */
+  .chart-container {
+      width: 80%; /* 调整图表容器的宽度 */
+      height: 900px; /* 调整图表容器的高度 */
+      border: 1px solid #ccc; /* 边框样式 */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 阴影样式 */
+      border-radius: 10px; /* 圆角样式 */
+      background-color: #fff; /* 背景颜色 */
+      /* 这里可以添加其他样式，例如边框、阴影等 */
+  }   
+</style>
+
+<div class="center-container">
+  <div id="chart-container" class="chart-container"></div>
+</div>
+
+<script type="text/javascript">
+  var chartContainer = document.getElementById('chart-container');
+  var chart = echarts.init(chartContainer);
+  var option = {
+"animation": true,
+"animationThreshold": 2000,
+"animationDuration": 1000,
+"animationEasing": "cubicOut",
+"animationDelay": 0,
+"animationDurationUpdate": 300,
+"animationEasingUpdate": "cubicOut",
+"animationDelayUpdate": 0,
+"aria": {
+  "enabled": false
+},
+"color": [
+  "#5470c6",
+  "#91cc75",
+  "#fac858",
+  "#ee6666",
+  "#73c0de",
+  "#3ba272",
+  "#fc8452",
+  "#9a60b4",
+  "#ea7ccc"
+],
+"series": [
+  {
+      "type": "map",
+      "name": "\u56fd\u5bb6\u6218\u961f\u4e2a\u6570",
+      "label": {
+          "show": false,
+          "margin": 8
+      },
+      "map": "world",
+      "data": [
+          {
+              "name": "Albania",
+              "value": 1
+          },
+          {
+              "name": "Argentina",
+              "value": 4
+          },
+          {
+              "name": "Asia",
+              "value": 1
+          },
+          {
+              "name": "Australia",
+              "value": 27
+          },
+          {
+              "name": "Belarus",
+              "value": 2
+          },
+          {
+              "name": "Belgium",
+              "value": 2
+          },
+          {
+              "name": "Brazil",
+              "value": 29
+          },
+          {
+              "name": "Bulgaria",
+              "value": 10
+          },
+          {
+              "name": "CIS",
+              "value": 3
+          },
+          {
+              "name": "Canada",
+              "value": 6
+          },
+          {
+              "name": "China",
+              "value": 16
+          },
+          {
+              "name": "Colombia",
+              "value": 2
+          },
+          {
+              "name": "Czech Republic",
+              "value": 2
+          },
+          {
+              "name": "Denmark",
+              "value": 19
+          },
+          {
+              "name": "Estonia",
+              "value": 1
+          },
+          {
+              "name": "Europe",
+              "value": 13
+          },
+          {
+              "name": "Finland",
+              "value": 8
+          },
+          {
+              "name": "France",
+              "value": 15
+          },
+          {
+              "name": "Germany",
+              "value": 12
+          },
+          {
+              "name": "Hungary",
+              "value": 2
+          },
+          {
+              "name": "India",
+              "value": 1
+          },
+          {
+              "name": "Indonesia",
+              "value": 3
+          },
+          {
+              "name": "Japan",
+              "value": 1
+          },
+          {
+              "name": "Kazakhstan",
+              "value": 5
+          },
+          {
+              "name": "Korea",
+              "value": 3
+          },
+          {
+              "name": "Lithuania",
+              "value": 1
+          },
+          {
+              "name": "Malaysia",
+              "value": 2
+          },
+          {
+              "name": "Mongolia",
+              "value": 4
+          },
+          {
+              "name": "Netherlands",
+              "value": 1
+          },
+          {
+              "name": "New Zealand",
+              "value": 1
+          },
+          {
+              "name": "North America",
+              "value": 3
+          },
+          {
+              "name": "Norway",
+              "value": 5
+          },
+          {
+              "name": "Oceania",
+              "value": 1
+          },
+          {
+              "name": "Philippines",
+              "value": 3
+          },
+          {
+              "name": "Poland",
+              "value": 18
+          },
+          {
+              "name": "Portugal",
+              "value": 5
+          },
+          {
+              "name": "Romania",
+              "value": 2
+          },
+          {
+              "name": "Russia",
+              "value": 26
+          },
+          {
+              "name": "Serbia",
+              "value": 5
+          },
+          {
+              "name": "Singapore",
+              "value": 3
+          },
+          {
+              "name": "Slovakia",
+              "value": 2
+          },
+          {
+              "name": "South Africa",
+              "value": 2
+          },
+          {
+              "name": "South America",
+              "value": 1
+          },
+          {
+              "name": "Spain",
+              "value": 2
+          },
+          {
+              "name": "Sweden",
+              "value": 21
+          },
+          {
+              "name": "Thailand",
+              "value": 6
+          },
+          {
+              "name": "Turkey",
+              "value": 4
+          },
+          {
+              "name": "Ukraine",
+              "value": 7
+          },
+          {
+              "name": "United Arab Emirates",
+              "value": 1
+          },
+          {
+              "name": "United Kingdom",
+              "value": 3
+          },
+          {
+              "name": "United States",
+              "value": 44
+          }
+      ],
+      "roam": true,
+      "aspectScale": 0.75,
+      "nameProperty": "name",
+      "selectedMode": false,
+      "zoom": 1,
+      "zlevel": 0,
+      "z": 2,
+      "seriesLayoutBy": "column",
+      "datasetIndex": 0,
+      "mapValueCalculation": "sum",
+      "showLegendSymbol": true,
+      "emphasis": {},
+      "rippleEffect": {
+          "show": true,
+          "brushType": "stroke",
+          "scale": 2.5,
+          "period": 4
+      }
+  }
+],
+"legend": [
+  {
+      "data": [
+          "\u56fd\u5bb6\u6218\u961f\u4e2a\u6570"
+      ],
+      "bottom": 10,
+      "selected": {},
+      "show": true,
+      
+      "padding": 5,
+      "itemGap": 10,
+      "itemWidth": 25,
+      "itemHeight": 14,
+      "backgroundColor": "transparent",
+      "borderColor": "#ccc",
+      "borderRadius": 0,
+      "pageButtonItemGap": 5,
+      "pageButtonPosition": "end",
+      "pageFormatter": "{current}/{total}",
+      "pageIconColor": "#2f4554",
+      "pageIconInactiveColor": "#aaa",
+      "pageIconSize": 15,
+      "animationDurationUpdate": 800,
+      "selector": false,
+      "selectorPosition": "auto",
+      "selectorItemGap": 7,
+      "selectorButtonGap": 10
+  }
+],
+"tooltip": {
+  "show": true,
+  "trigger": "item",
+  "triggerOn": "mousemove|click",
+  "axisPointer": {
+      "type": "line"
+  },
+  "showContent": true,
+  "alwaysShowContent": false,
+  "showDelay": 0,
+  "hideDelay": 100,
+  "enterable": false,
+  "confine": false,
+  "appendToBody": false,
+  "transitionDuration": 0.4,
+  "textStyle": {
+      "fontSize": 14
+  },
+  "borderWidth": 0,
+  "padding": 5,
+  "order": "seriesAsc"
+},
+"title": [
+  {
+      "show": true,
+      "text": "\u56fd\u5bb6\u6218\u961f\u4e2a\u6570",
+      "target": "blank",
+      "subtarget": "blank",
+      "left": "center",
+      "padding": 5,
+      "itemGap": 10,
+      "textAlign": "auto",
+      "textVerticalAlign": "auto",
+      "triggerEvent": false
+  }
+],
+"visualMap": {
+  "show": true,
+  "type": "piecewise",
+  "min": 0,
+  "max": 44,
+  "text": [
+      "High",
+      "Low"
+  ],
+  "inRange": {
+      "color": [
+          "#E5E5E5",
+          "#999999"
+      ]
+  },
+  "calculable": true,
+  "inverse": false,
+  "splitNumber": 5,
+  "hoverLink": true,
+  "orient": "vertical",
+  "padding": 5,
+  "showLabel": true,
+  "itemWidth": 20,
+  "itemHeight": 20,
+  "borderWidth": 0,
+  "pieces": [
+      {
+          "min": 0,
+          "max": 4,
+          "color": "#DAE7B8"
+      },
+      {
+          "min": 5,
+          "max": 9,
+          "color": "#DAFFB8"
+      },
+      {
+          "min": 10,
+          "max": 14,
+          "color": "#FFF3B1"
+      },
+      {
+          "min": 15,
+          "max": 19,
+          "color": "#FFEB7B"
+      },
+      {
+          "min": 20,
+          "max": 24,
+          "color": "#FFD34E"
+      },
+      {
+          "min": 25,
+          "max": 29,
+          "color": "#FFA940"
+      },
+      {
+          "min": 30,
+          "max": 34,
+          "color": "#FF7A45"
+      },
+      {
+          "min": 35,
+          "max": 39,
+          "color": "#E35252"
+      },
+      {
+          "min": 40,
+          "max": 44,
+          "color": "#E35252"
+      },
+      {
+          "min": 45,
+          "max": 49,
+          "color": "#E35252"
+      }
+  ]
+}
+};
+chart.setOption(option);
+</script>
+</div>
+
+<div>
+  <h1 class="title2">CSGO职业选手力导向</h1>
+  <iframe src="graph-webkit-dep.html" style="width: 100%; height: 800px; border: none;"></iframe>
+</div>
+  
+<div class="vis2">
+  <h1 class="title2">CS:GO被害者热力图</h1>
+  <div class="container">
+  
+    <div id="imageContainer">
+      <div id="imagePreview">
+        <img id="mainImage" src="R2.png" alt="Main Image">
+      </div>
+    </div>
+
+    <div class="buttonGroup">
+      <button class="button" onclick="changeImage('dust2', 'de_dust2.png')">dust2</button>
+      <button class="button" onclick="changeImage('inferno', 'de_inferno.png')">inferno</button>
+      <button class="button" onclick="changeImage('mirage', 'de_mirage.png')">mirage</button>
+    </div>
+
+    <!-- Buttons for HE and fire -->
+    <div class="buttonGroup" id="scatterButtons" style="display: none;">
+      <button class="button" onclick="showScatter('fire')">Fire</button>
+      <button class="button" onclick="showScatter('HE')">HE</button>
+      <button class="button" onclick="showScatter('smoke')">Smoke</button>
+      <button class="button" onclick="showScatter('zeus')">Zeus</button>
+      <button class="button" onclick="showScatter('shotgun')">Shotgun</button>
+      <button class="button" onclick="showScatter('knife')">Knife</button>
+      <button class="button" onclick="showScatter('flash')">Flash</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,1566 @@
+{   "Economy":
+    {   
+        "$count": 1,
+        "Afghanistan": {
+            "$count": 5406.0
+        },
+        "Albania": {
+            "$count": 77000.0
+        },
+        "Algeria": {
+            "$count": 1027092.9
+        },
+        "Argentina": {
+            "$count": 8000.0
+        },
+        "Armenia": {
+            "$count": 3333.3
+        },
+        "Australia": {
+            "$count": 100260.0
+        },
+        "Azerbaijan": {
+            "$count": 1500.0
+        },
+        "Bangladesh": {
+            "$count": 50000.0
+        },
+        "Barbados": {
+            "$count": 0.0
+        },
+        "Belgium": {
+            "$count": 15000.0
+        },
+        "Bhutan": {
+            "$count": 0.0
+        },
+        "Bolivia": {
+            "$count": 0.0
+        },
+        "Bosnia and Herzegovina": {
+            "$count": 0.0
+        },
+        "Brazil": {
+            "$count": 500.0
+        },
+        "Bulgaria": {
+            "$count": 0.0
+        },
+        "Burundi": {
+            "$count": 0.0
+        },
+        "Chile": {
+            "$count": 3408587.0
+        },
+        "China": {
+            "$count": 11399535.7
+        },
+        "Colombia": {
+            "$count": 232366.6
+        },
+        "Comoros": {
+            "$count": 0.0
+        },
+        "Costa Rica": {
+            "$count": 37070.0
+        },
+        "Croatia": {
+            "$count": 1302340.0
+        },
+        "Cuba": {
+            "$count": 0.0
+        },
+        "Cyprus": {
+            "$count": 434.0
+        },
+        "Democratic Republic of Congo": {
+            "$count": 720.0
+        },
+        "Dominica": {
+            "$count": 0.0
+        },
+        "Dominican Republic": {
+            "$count": 0.0
+        },
+        "Ecuador": {
+            "$count": 353500.0
+        },
+        "Egypt": {
+            "$count": 120000.0
+        },
+        "El Salvador": {
+            "$count": 341150.0
+        },
+        "Ethiopia": {
+            "$count": 32.0
+        },
+        "France": {
+            "$count": 0.0
+        },
+        "Georgia": {
+            "$count": 35000.0
+        },
+        "Germany": {
+            "$count": 6200.0
+        },
+        "Greece": {
+            "$count": 777545.0
+        },
+        "Guatemala": {
+            "$count": 121205.0
+        },
+        "Guinea": {
+            "$count": 800.0
+        },
+        "Haiti": {
+            "$count": 964007.1
+        },
+        "Honduras": {
+            "$count": 10000.0
+        },
+        "Hungary": {
+            "$count": 0.0
+        },
+        "Iceland": {
+            "$count": 2400.0
+        },
+        "India": {
+            "$count": 531670.0
+        },
+        "Indonesia": {
+            "$count": 1423955.6
+        },
+        "Iran": {
+            "$count": 1304862.8
+        },
+        "Iraq": {
+            "$count": 0.0
+        },
+        "Italy": {
+            "$count": 5485235.2
+        },
+        "Japan": {
+            "$count": 39961640.0
+        },
+        "Kazakhstan": {
+            "$count": 0.0
+        },
+        "Kenya": {
+            "$count": 10000.0
+        },
+        "Kyrgyzstan": {
+            "$count": 17500.0
+        },
+        "Laos": {
+            "$count": 12.0
+        },
+        "Lebanon": {
+            "$count": 0.0
+        },
+        "Libya": {
+            "$count": 500.0
+        },
+        "Malawi": {
+            "$count": 2800.0
+        },
+        "Malaysia": {
+            "$count": 50000.2
+        },
+        "Maldives": {
+            "$count": 47010.0
+        },
+        "Mexico": {
+            "$count": 1474340.0
+        },
+        "Mongolia": {
+            "$count": 0.0
+        },
+        "Morocco": {
+            "$count": 52000.0
+        },
+        "Mozambique": {
+            "$count": 0.0
+        },
+        "Myanmar": {
+            "$count": 51477.0
+        },
+        "Nepal": {
+            "$count": 548000.0
+        },
+        "Netherlands": {
+            "$count": 0.0
+        },
+        "New Zealand": {
+            "$count": 2866266.9
+        },
+        "Nicaragua": {
+            "$count": 87500.0
+        },
+        "North Macedonia": {
+            "$count": 1000.0
+        },
+        "Pakistan": {
+            "$count": 534875.5
+        },
+        "Panama": {
+            "$count": 0.0
+        },
+        "Papua New Guinea": {
+            "$count": 9687.5
+        },
+        "Peru": {
+            "$count": 151275.0
+        },
+        "Philippines": {
+            "$count": 66854.6
+        },
+        "Poland": {
+            "$count": 0.0
+        },
+        "Portugal": {
+            "$count": 7700.0
+        },
+        "Romania": {
+            "$count": 200000.0
+        },
+        "Russia": {
+            "$count": 55152.0
+        },
+        "Rwanda": {
+            "$count": 0.0
+        },
+        "Samoa": {
+            "$count": 12404.0
+        },
+        "Serbia": {
+            "$count": 13226.0
+        },
+        "Seychelles": {
+            "$count": 3000.0
+        },
+        "Slovenia": {
+            "$count": 1000.0
+        },
+        "Solomon Islands": {
+            "$count": 200.0
+        },
+        "Somalia": {
+            "$count": 10000.0
+        },
+        "South Africa": {
+            "$count": 4400.0
+        },
+        "South Korea": {
+            "$count": 2100.0
+        },
+        "Spain": {
+            "$count": 24400.4
+        },
+        "Sri Lanka": {
+            "$count": 131650.0
+        },
+        "Sudan": {
+            "$count": 0.0
+        },
+        "Tajikistan": {
+            "$count": 2850.0
+        },
+        "Tanzania": {
+            "$count": 45800.0
+        },
+        "Thailand": {
+            "$count": 106200.0
+        },
+        "Timor": {
+            "$count": 400.0
+        },
+        "Tonga": {
+            "$count": 1070.0
+        },
+        "Trinidad and Tobago": {
+            "$count": 2500.0
+        },
+        "Tunisia": {
+            "$count": 0.0
+        },
+        "Turkey": {
+            "$count": 2520697.0
+        },
+        "Turkmenistan": {
+            "$count": 0.0
+        },
+        "Uganda": {
+            "$count": 7150.0
+        },
+        "United Kingdom": {
+            "$count": 6000.0
+        },
+        "United States": {
+            "$count": 4108992.0
+        },
+        "Uzbekistan": {
+            "$count": 0.0
+        },
+        "Vanuatu": {
+            "$count": 0.0
+        },
+        "Venezuela": {
+            "$count": 22200.0
+        },
+        "Yemen": {
+            "$count": 0.0
+        }
+    },
+    "Death":
+    {   
+        "$count": 2,
+        "Afghanistan": {
+            "$count": 12617.0
+        },
+        "Albania": {
+            "$count": 113.0
+        },
+        "Algeria": {
+            "$count": 6483.0
+        },
+        "Argentina": {
+            "$count": 76.0
+        },
+        "Armenia": {
+            "$count": 0.0
+        },
+        "Australia": {
+            "$count": 12.0
+        },
+        "Azerbaijan": {
+            "$count": 33.0
+        },
+        "Bangladesh": {
+            "$count": 45.0
+        },
+        "Barbados": {
+            "$count": 0.0
+        },
+        "Belgium": {
+            "$count": 2.0
+        },
+        "Bhutan": {
+            "$count": 12.0
+        },
+        "Bolivia": {
+            "$count": 100.0
+        },
+        "Bosnia and Herzegovina": {
+            "$count": 1.0
+        },
+        "Brazil": {
+            "$count": 2.0
+        },
+        "Bulgaria": {
+            "$count": 24.0
+        },
+        "Burundi": {
+            "$count": 3.0
+        },
+        "Chile": {
+            "$count": 7317.0
+        },
+        "China": {
+            "$count": 371339.0
+        },
+        "Colombia": {
+            "$count": 2901.0
+        },
+        "Comoros": {
+            "$count": 0.0
+        },
+        "Costa Rica": {
+            "$count": 166.0
+        },
+        "Croatia": {
+            "$count": 9.0
+        },
+        "Cuba": {
+            "$count": 1.0
+        },
+        "Cyprus": {
+            "$count": 42.0
+        },
+        "Democratic Republic of Congo": {
+            "$count": 53.0
+        },
+        "Dominica": {
+            "$count": 0.0
+        },
+        "Dominican Republic": {
+            "$count": 3.0
+        },
+        "Ecuador": {
+            "$count": 5773.0
+        },
+        "Egypt": {
+            "$count": 584.0
+        },
+        "El Salvador": {
+            "$count": 3506.0
+        },
+        "Ethiopia": {
+            "$count": 54.0
+        },
+        "France": {
+            "$count": 12.0
+        },
+        "Georgia": {
+            "$count": 15.0
+        },
+        "Germany": {
+            "$count": 1.0
+        },
+        "Greece": {
+            "$count": 996.0
+        },
+        "Guatemala": {
+            "$count": 23079.0
+        },
+        "Guinea": {
+            "$count": 443.0
+        },
+        "Haiti": {
+            "$count": 225170.0
+        },
+        "Honduras": {
+            "$count": 7.0
+        },
+        "Hungary": {
+            "$count": 0.0
+        },
+        "Iceland": {
+            "$count": 1.0
+        },
+        "India": {
+            "$count": 51618.0
+        },
+        "Indonesia": {
+            "$count": 186921.0
+        },
+        "Iran": {
+            "$count": 137262.0
+        },
+        "Iraq": {
+            "$count": 30.0
+        },
+        "Italy": {
+            "$count": 6642.0
+        },
+        "Japan": {
+            "$count": 26155.0
+        },
+        "Kazakhstan": {
+            "$count": 3.0
+        },
+        "Kenya": {
+            "$count": 1.0
+        },
+        "Kyrgyzstan": {
+            "$count": 132.0
+        },
+        "Laos": {
+            "$count": 0.0
+        },
+        "Lebanon": {
+            "$count": 136.0
+        },
+        "Libya": {
+            "$count": 300.0
+        },
+        "Malawi": {
+            "$count": 13.0
+        },
+        "Malaysia": {
+            "$count": 104.0
+        },
+        "Maldives": {
+            "$count": 102.0
+        },
+        "Mexico": {
+            "$count": 11061.0
+        },
+        "Mongolia": {
+            "$count": 1200.0
+        },
+        "Morocco": {
+            "$count": 12639.0
+        },
+        "Mozambique": {
+            "$count": 4.0
+        },
+        "Myanmar": {
+            "$count": 187.0
+        },
+        "Nepal": {
+            "$count": 9871.0
+        },
+        "Netherlands": {
+            "$count": 0.0
+        },
+        "New Zealand": {
+            "$count": 188.0
+        },
+        "Nicaragua": {
+            "$count": 10688.0
+        },
+        "North Macedonia": {
+            "$count": 0.0
+        },
+        "Pakistan": {
+            "$count": 79925.0
+        },
+        "Panama": {
+            "$count": 32.0
+        },
+        "Papua New Guinea": {
+            "$count": 5457.0
+        },
+        "Peru": {
+            "$count": 68525.0
+        },
+        "Philippines": {
+            "$count": 9747.0
+        },
+        "Poland": {
+            "$count": 0.0
+        },
+        "Portugal": {
+            "$count": 81.0
+        },
+        "Romania": {
+            "$count": 1650.0
+        },
+        "Russia": {
+            "$count": 2019.0
+        },
+        "Rwanda": {
+            "$count": 81.0
+        },
+        "Samoa": {
+            "$count": 148.0
+        },
+        "Serbia": {
+            "$count": 2.0
+        },
+        "Seychelles": {
+            "$count": 3.0
+        },
+        "Slovenia": {
+            "$count": 1.0
+        },
+        "Solomon Islands": {
+            "$count": 297.0
+        },
+        "Somalia": {
+            "$count": 298.0
+        },
+        "South Africa": {
+            "$count": 37.0
+        },
+        "South Korea": {
+            "$count": 0.0
+        },
+        "Spain": {
+            "$count": 21.0
+        },
+        "Sri Lanka": {
+            "$count": 35399.0
+        },
+        "Sudan": {
+            "$count": 3.0
+        },
+        "Tajikistan": {
+            "$count": 26.0
+        },
+        "Tanzania": {
+            "$count": 36.0
+        },
+        "Thailand": {
+            "$count": 8347.0
+        },
+        "Timor": {
+            "$count": 0.0
+        },
+        "Tonga": {
+            "$count": 10.0
+        },
+        "Trinidad and Tobago": {
+            "$count": 0.0
+        },
+        "Tunisia": {
+            "$count": 13.0
+        },
+        "Turkey": {
+            "$count": 34033.0
+        },
+        "Turkmenistan": {
+            "$count": 11.0
+        },
+        "Uganda": {
+            "$count": 115.0
+        },
+        "United Kingdom": {
+            "$count": 0.0
+        },
+        "United States": {
+            "$count": 452.0
+        },
+        "Uzbekistan": {
+            "$count": 22.0
+        },
+        "Vanuatu": {
+            "$count": 12.0
+        },
+        "Venezuela": {
+            "$count": 423.0
+        },
+        "Yemen": {
+            "$count": 10.0
+        }
+    },
+    "Injuries":
+    {
+        "$count": 3,
+        "Afghanistan": {
+            "$count": 71926.0
+        },
+        "Albania": {
+            "$count": 1668.0
+        },
+        "Algeria": {
+            "$count": 25651.0
+        },
+        "Argentina": {
+            "$count": 379.0
+        },
+        "Armenia": {
+            "$count": 0.0
+        },
+        "Australia": {
+            "$count": 136.0
+        },
+        "Azerbaijan": {
+            "$count": 678.0
+        },
+        "Bangladesh": {
+            "$count": 895.0
+        },
+        "Barbados": {
+            "$count": 1.0
+        },
+        "Belgium": {
+            "$count": 30.0
+        },
+        "Bhutan": {
+            "$count": 30.0
+        },
+        "Bolivia": {
+            "$count": 50.0
+        },
+        "Bosnia and Herzegovina": {
+            "$count": 2.0
+        },
+        "Brazil": {
+            "$count": 6.0
+        },
+        "Bulgaria": {
+            "$count": 297.0
+        },
+        "Burundi": {
+            "$count": 0.0
+        },
+        "Chile": {
+            "$count": 17372.0
+        },
+        "China": {
+            "$count": 670081.0
+        },
+        "Colombia": {
+            "$count": 12678.0
+        },
+        "Comoros": {
+            "$count": 0.0
+        },
+        "Costa Rica": {
+            "$count": 1097.0
+        },
+        "Croatia": {
+            "$count": 63.0
+        },
+        "Cuba": {
+            "$count": 48.0
+        },
+        "Cyprus": {
+            "$count": 105.0
+        },
+        "Democratic Republic of Congo": {
+            "$count": 696.0
+        },
+        "Dominica": {
+            "$count": 0.0
+        },
+        "Dominican Republic": {
+            "$count": 15.0
+        },
+        "Ecuador": {
+            "$count": 6891.0
+        },
+        "Egypt": {
+            "$count": 10042.0
+        },
+        "El Salvador": {
+            "$count": 29261.0
+        },
+        "Ethiopia": {
+            "$count": 165.0
+        },
+        "France": {
+            "$count": 86.0
+        },
+        "Georgia": {
+            "$count": 286.0
+        },
+        "Germany": {
+            "$count": 25.0
+        },
+        "Greece": {
+            "$count": 7165.0
+        },
+        "Guatemala": {
+            "$count": 77680.0
+        },
+        "Guinea": {
+            "$count": 1436.0
+        },
+        "Haiti": {
+            "$count": 313236.0
+        },
+        "Honduras": {
+            "$count": 154.0
+        },
+        "Hungary": {
+            "$count": 0.0
+        },
+        "Iceland": {
+            "$count": 7.0
+        },
+        "India": {
+            "$count": 221434.0
+        },
+        "Indonesia": {
+            "$count": 177465.0
+        },
+        "Iran": {
+            "$count": 178672.0
+        },
+        "Iraq": {
+            "$count": 469.0
+        },
+        "Italy": {
+            "$count": 12796.0
+        },
+        "Japan": {
+            "$count": 57469.0
+        },
+        "Kazakhstan": {
+            "$count": 626.0
+        },
+        "Kenya": {
+            "$count": 0.0
+        },
+        "Kyrgyzstan": {
+            "$count": 242.0
+        },
+        "Laos": {
+            "$count": 0.0
+        },
+        "Lebanon": {
+            "$count": 200.0
+        },
+        "Libya": {
+            "$count": 375.0
+        },
+        "Malawi": {
+            "$count": 286.0
+        },
+        "Malaysia": {
+            "$count": 777.0
+        },
+        "Maldives": {
+            "$count": 2214.0
+        },
+        "Mexico": {
+            "$count": 40685.0
+        },
+        "Mongolia": {
+            "$count": 0.0
+        },
+        "Morocco": {
+            "$count": 25926.0
+        },
+        "Mozambique": {
+            "$count": 36.0
+        },
+        "Myanmar": {
+            "$count": 358.0
+        },
+        "Nepal": {
+            "$count": 27228.0
+        },
+        "Netherlands": {
+            "$count": 20.0
+        },
+        "New Zealand": {
+            "$count": 1640.0
+        },
+        "Nicaragua": {
+            "$count": 20800.0
+        },
+        "North Macedonia": {
+            "$count": 100.0
+        },
+        "Pakistan": {
+            "$count": 150776.0
+        },
+        "Panama": {
+            "$count": 671.0
+        },
+        "Papua New Guinea": {
+            "$count": 1284.0
+        },
+        "Peru": {
+            "$count": 157231.0
+        },
+        "Philippines": {
+            "$count": 17100.0
+        },
+        "Poland": {
+            "$count": 0.0
+        },
+        "Portugal": {
+            "$count": 780.0
+        },
+        "Romania": {
+            "$count": 12005.0
+        },
+        "Russia": {
+            "$count": 1177.0
+        },
+        "Rwanda": {
+            "$count": 751.0
+        },
+        "Samoa": {
+            "$count": 310.0
+        },
+        "Serbia": {
+            "$count": 120.0
+        },
+        "Seychelles": {
+            "$count": 0.0
+        },
+        "Slovenia": {
+            "$count": 5.0
+        },
+        "Solomon Islands": {
+            "$count": 12.0
+        },
+        "Somalia": {
+            "$count": 283.0
+        },
+        "South Africa": {
+            "$count": 112.0
+        },
+        "South Korea": {
+            "$count": 89.0
+        },
+        "Spain": {
+            "$count": 390.0
+        },
+        "Sri Lanka": {
+            "$count": 23176.0
+        },
+        "Sudan": {
+            "$count": 15.0
+        },
+        "Tajikistan": {
+            "$count": 86.0
+        },
+        "Tanzania": {
+            "$count": 446.0
+        },
+        "Thailand": {
+            "$count": 8496.0
+        },
+        "Timor": {
+            "$count": 3.0
+        },
+        "Tonga": {
+            "$count": 12.0
+        },
+        "Trinidad and Tobago": {
+            "$count": 2.0
+        },
+        "Tunisia": {
+            "$count": 0.0
+        },
+        "Turkey": {
+            "$count": 92649.0
+        },
+        "Turkmenistan": {
+            "$count": 0.0
+        },
+        "Uganda": {
+            "$count": 510.0
+        },
+        "United Kingdom": {
+            "$count": 1.0
+        },
+        "United States": {
+            "$count": 14503.0
+        },
+        "Uzbekistan": {
+            "$count": 0.0
+        },
+        "Vanuatu": {
+            "$count": 105.0
+        },
+        "Venezuela": {
+            "$count": 2305.0
+        },
+        "Yemen": {
+            "$count": 39.0
+        }
+    },
+    "Affected People":
+    {
+        "$count": 4,
+        "Afghanistan": {
+            "$count": 879889.0
+        },
+        "Albania": {
+            "$count": 209590.0
+        },
+        "Algeria": {
+            "$count": 561003.0
+        },
+        "Argentina": {
+            "$count": 47300.0
+        },
+        "Armenia": {
+            "$count": 15000.0
+        },
+        "Australia": {
+            "$count": 10874.0
+        },
+        "Azerbaijan": {
+            "$count": 718944.0
+        },
+        "Bangladesh": {
+            "$count": 3500.0
+        },
+        "Barbados": {
+            "$count": 0.0
+        },
+        "Belgium": {
+            "$count": 1000.0
+        },
+        "Bhutan": {
+            "$count": 20500.0
+        },
+        "Bolivia": {
+            "$count": 11100.0
+        },
+        "Bosnia and Herzegovina": {
+            "$count": 1050.0
+        },
+        "Brazil": {
+            "$count": 15280.0
+        },
+        "Bulgaria": {
+            "$count": 665.0
+        },
+        "Burundi": {
+            "$count": 0.0
+        },
+        "Chile": {
+            "$count": 8527633.0
+        },
+        "China": {
+            "$count": 71800401.0
+        },
+        "Colombia": {
+            "$count": 922675.0
+        },
+        "Comoros": {
+            "$count": 10000.0
+        },
+        "Costa Rica": {
+            "$count": 145387.0
+        },
+        "Croatia": {
+            "$count": 209371.0
+        },
+        "Cuba": {
+            "$count": 5829.0
+        },
+        "Cyprus": {
+            "$count": 1710.0
+        },
+        "Democratic Republic of Congo": {
+            "$count": 20615.0
+        },
+        "Dominica": {
+            "$count": 100.0
+        },
+        "Dominican Republic": {
+            "$count": 2000.0
+        },
+        "Ecuador": {
+            "$count": 474166.0
+        },
+        "Egypt": {
+            "$count": 57950.0
+        },
+        "El Salvador": {
+            "$count": 2222889.0
+        },
+        "Ethiopia": {
+            "$count": 0.0
+        },
+        "France": {
+            "$count": 750.0
+        },
+        "Georgia": {
+            "$count": 27490.0
+        },
+        "Germany": {
+            "$count": 1650.0
+        },
+        "Greece": {
+            "$count": 1049782.0
+        },
+        "Guatemala": {
+            "$count": 5222636.0
+        },
+        "Guinea": {
+            "$count": 20000.0
+        },
+        "Haiti": {
+            "$count": 4128930.0
+        },
+        "Honduras": {
+            "$count": 50500.0
+        },
+        "Hungary": {
+            "$count": 1800.0
+        },
+        "Iceland": {
+            "$count": 129.0
+        },
+        "India": {
+            "$count": 26186679.0
+        },
+        "Indonesia": {
+            "$count": 10487348.0
+        },
+        "Iran": {
+            "$count": 2598040.0
+        },
+        "Iraq": {
+            "$count": 5500.0
+        },
+        "Italy": {
+            "$count": 647701.0
+        },
+        "Japan": {
+            "$count": 1278074.0
+        },
+        "Kazakhstan": {
+            "$count": 36000.0
+        },
+        "Kenya": {
+            "$count": 0.0
+        },
+        "Kyrgyzstan": {
+            "$count": 136858.0
+        },
+        "Laos": {
+            "$count": 0.0
+        },
+        "Lebanon": {
+            "$count": 0.0
+        },
+        "Libya": {
+            "$count": 0.0
+        },
+        "Malawi": {
+            "$count": 0.0
+        },
+        "Malaysia": {
+            "$count": 0.0
+        },
+        "Maldives": {
+            "$count": 12000.0
+        },
+        "Mexico": {
+            "$count": 4041319.0
+        },
+        "Mongolia": {
+            "$count": 0.0
+        },
+        "Morocco": {
+            "$count": 0.0
+        },
+        "Mozambique": {
+            "$count": 0.0
+        },
+        "Myanmar": {
+            "$count": 33065.0
+        },
+        "Nepal": {
+            "$count": 6339880.0
+        },
+        "Netherlands": {
+            "$count": 0.0
+        },
+        "New Zealand": {
+            "$count": 621136.0
+        },
+        "Nicaragua": {
+            "$count": 421715.0
+        },
+        "North Macedonia": {
+            "$count": 0.0
+        },
+        "Pakistan": {
+            "$count": 2136276.0
+        },
+        "Panama": {
+            "$count": 11500.0
+        },
+        "Papua New Guinea": {
+            "$count": 577249.0
+        },
+        "Peru": {
+            "$count": 5832207.0
+        },
+        "Philippines": {
+            "$count": 7203430.0
+        },
+        "Poland": {
+            "$count": 1050.0
+        },
+        "Portugal": {
+            "$count": 22300.0
+        },
+        "Romania": {
+            "$count": 201845.0
+        },
+        "Russia": {
+            "$count": 23273.0
+        },
+        "Rwanda": {
+            "$count": 1535.0
+        },
+        "Samoa": {
+            "$count": 5274.0
+        },
+        "Serbia": {
+            "$count": 25440.0
+        },
+        "Seychelles": {
+            "$count": 4760.0
+        },
+        "Slovenia": {
+            "$count": 600.0
+        },
+        "Solomon Islands": {
+            "$count": 17598.0
+        },
+        "Somalia": {
+            "$count": 104800.0
+        },
+        "South Africa": {
+            "$count": 3000.0
+        },
+        "South Korea": {
+            "$count": 34800.0
+        },
+        "Spain": {
+            "$count": 0.0
+        },
+        "Sri Lanka": {
+            "$count": 516130.0
+        },
+        "Sudan": {
+            "$count": 8000.0
+        },
+        "Tajikistan": {
+            "$count": 47042.0
+        },
+        "Tanzania": {
+            "$count": 145411.0
+        },
+        "Thailand": {
+            "$count": 76050.0
+        },
+        "Timor": {
+            "$count": 0.0
+        },
+        "Tonga": {
+            "$count": 5500.0
+        },
+        "Trinidad and Tobago": {
+            "$count": 0.0
+        },
+        "Tunisia": {
+            "$count": 0.0
+        },
+        "Turkey": {
+            "$count": 5719203.0
+        },
+        "Turkmenistan": {
+            "$count": 0.0
+        },
+        "Uganda": {
+            "$count": 57000.0
+        },
+        "United Kingdom": {
+            "$count": 4500.0
+        },
+        "United States": {
+            "$count": 43544.0
+        },
+        "Uzbekistan": {
+            "$count": 50000.0
+        },
+        "Vanuatu": {
+            "$count": 13000.0
+        },
+        "Venezuela": {
+            "$count": 80300.0
+        },
+        "Yemen": {
+            "$count": 0.0
+        }
+    },
+    "Homeless":
+    {
+        "$count": 5,
+        "Afghanistan": {
+            "$count": 139575.0
+        },
+        "Albania": {
+            "$count": 5150.0
+        },
+        "Algeria": {
+            "$count": 801050.0
+        },
+        "Argentina": {
+            "$count": 40200.0
+        },
+        "Armenia": {
+            "$count": 0.0
+        },
+        "Australia": {
+            "$count": 420.0
+        },
+        "Azerbaijan": {
+            "$count": 15349.0
+        },
+        "Bangladesh": {
+            "$count": 15000.0
+        },
+        "Barbados": {
+            "$count": 0.0
+        },
+        "Belgium": {
+            "$count": 0.0
+        },
+        "Bhutan": {
+            "$count": 0.0
+        },
+        "Bolivia": {
+            "$count": 6900.0
+        },
+        "Bosnia and Herzegovina": {
+            "$count": 0.0
+        },
+        "Brazil": {
+            "$count": 8000.0
+        },
+        "Bulgaria": {
+            "$count": 3000.0
+        },
+        "Burundi": {
+            "$count": 120.0
+        },
+        "Chile": {
+            "$count": 1318575.0
+        },
+        "China": {
+            "$count": 5329030.0
+        },
+        "Colombia": {
+            "$count": 525312.0
+        },
+        "Comoros": {
+            "$count": 0.0
+        },
+        "Costa Rica": {
+            "$count": 18009.0
+        },
+        "Croatia": {
+            "$count": 20915.0
+        },
+        "Cuba": {
+            "$count": 0.0
+        },
+        "Cyprus": {
+            "$count": 2650.0
+        },
+        "Democratic Republic of Congo": {
+            "$count": 1850.0
+        },
+        "Dominica": {
+            "$count": 0.0
+        },
+        "Dominican Republic": {
+            "$count": 0.0
+        },
+        "Ecuador": {
+            "$count": 214882.0
+        },
+        "Egypt": {
+            "$count": 25555.0
+        },
+        "El Salvador": {
+            "$count": 300500.0
+        },
+        "Ethiopia": {
+            "$count": 420.0
+        },
+        "France": {
+            "$count": 1020.0
+        },
+        "Georgia": {
+            "$count": 2436.0
+        },
+        "Germany": {
+            "$count": 0.0
+        },
+        "Greece": {
+            "$count": 155266.0
+        },
+        "Guatemala": {
+            "$count": 1180996.0
+        },
+        "Guinea": {
+            "$count": 20000.0
+        },
+        "Haiti": {
+            "$count": 950.0
+        },
+        "Honduras": {
+            "$count": 1865.0
+        },
+        "Hungary": {
+            "$count": 0.0
+        },
+        "Iceland": {
+            "$count": 69.0
+        },
+        "India": {
+            "$count": 2160700.0
+        },
+        "Indonesia": {
+            "$count": 1633353.0
+        },
+        "Iran": {
+            "$count": 270210.0
+        },
+        "Iraq": {
+            "$count": 500.0
+        },
+        "Italy": {
+            "$count": 296300.0
+        },
+        "Japan": {
+            "$count": 318915.0
+        },
+        "Kazakhstan": {
+            "$count": 0.0
+        },
+        "Kenya": {
+            "$count": 0.0
+        },
+        "Kyrgyzstan": {
+            "$count": 38963.0
+        },
+        "Laos": {
+            "$count": 0.0
+        },
+        "Lebanon": {
+            "$count": 0.0
+        },
+        "Libya": {
+            "$count": 5000.0
+        },
+        "Malawi": {
+            "$count": 70550.0
+        },
+        "Malaysia": {
+            "$count": 4296.0
+        },
+        "Maldives": {
+            "$count": 13000.0
+        },
+        "Mexico": {
+            "$count": 118699.0
+        },
+        "Mongolia": {
+            "$count": 0.0
+        },
+        "Morocco": {
+            "$count": 12539.0
+        },
+        "Mozambique": {
+            "$count": 1440.0
+        },
+        "Myanmar": {
+            "$count": 6352.0
+        },
+        "Nepal": {
+            "$count": 35000.0
+        },
+        "Netherlands": {
+            "$count": 0.0
+        },
+        "New Zealand": {
+            "$count": 300.0
+        },
+        "Nicaragua": {
+            "$count": 305660.0
+        },
+        "North Macedonia": {
+            "$count": 0.0
+        },
+        "Pakistan": {
+            "$count": 5187485.0
+        },
+        "Panama": {
+            "$count": 9340.0
+        },
+        "Papua New Guinea": {
+            "$count": 18345.0
+        },
+        "Peru": {
+            "$count": 306876.0
+        },
+        "Philippines": {
+            "$count": 4700.0
+        },
+        "Poland": {
+            "$count": 0.0
+        },
+        "Portugal": {
+            "$count": 1000.0
+        },
+        "Romania": {
+            "$count": 179000.0
+        },
+        "Russia": {
+            "$count": 35740.0
+        },
+        "Rwanda": {
+            "$count": 0.0
+        },
+        "Samoa": {
+            "$count": 0.0
+        },
+        "Serbia": {
+            "$count": 1470.0
+        },
+        "Seychelles": {
+            "$count": 70.0
+        },
+        "Slovenia": {
+            "$count": 700.0
+        },
+        "Solomon Islands": {
+            "$count": 500.0
+        },
+        "Somalia": {
+            "$count": 0.0
+        },
+        "South Africa": {
+            "$count": 0.0
+        },
+        "South Korea": {
+            "$count": 0.0
+        },
+        "Spain": {
+            "$count": 15000.0
+        },
+        "Sri Lanka": {
+            "$count": 480000.0
+        },
+        "Sudan": {
+            "$count": 0.0
+        },
+        "Tajikistan": {
+            "$count": 1634.0
+        },
+        "Tanzania": {
+            "$count": 2735.0
+        },
+        "Thailand": {
+            "$count": 0.0
+        },
+        "Timor": {
+            "$count": 2000.0
+        },
+        "Tonga": {
+            "$count": 500.0
+        },
+        "Trinidad and Tobago": {
+            "$count": 15.0
+        },
+        "Tunisia": {
+            "$count": 0.0
+        },
+        "Turkey": {
+            "$count": 1223390.0
+        },
+        "Turkmenistan": {
+            "$count": 0.0
+        },
+        "Uganda": {
+            "$count": 590.0
+        },
+        "United Kingdom": {
+            "$count": 0.0
+        },
+        "United States": {
+            "$count": 20509.0
+        },
+        "Uzbekistan": {
+            "$count": 0.0
+        },
+        "Vanuatu": {
+            "$count": 2000.0
+        },
+        "Venezuela": {
+            "$count": 6300.0
+        },
+        "Yemen": {
+            "$count": 40000.0
+        }
+    }
+}
