@@ -85,7 +85,17 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 添加阴影 */
     animation: shadowEffect 1.5s ease-in-out infinite alternate; /* 添加动画 */
   }
-
+  .body-text {
+    
+    font-size: 24px; /* 设置正文字体大小 */
+    line-height: 1.5; /* 设置行高为字体大小的1.5倍 */
+    text-align: center; /* 两端对齐文本 */
+    font-family: Arial, sans-serif; /* 设置字体 */
+    color: #333; /* 设置字体颜色为深灰色 */
+    margin: 20px 0; /* 设置上下边距为 20px */
+    padding: 0 200px; /* 设置左右内边距为 20px */
+    
+  }
   /* 定义阴影动画 */
   @keyframes shadowEffect {
     from {

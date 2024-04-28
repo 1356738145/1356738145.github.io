@@ -17,7 +17,8 @@
 </div>
 
 <div class = "force">
-  <h1 class="title2">主流FPS游戏Google搜索</h1>
+  <h1 class="title2">PART1：主流FPS游戏Google搜索</h1>
+  <p class = "body-text">本主题通过一个动态柱状图，展示了从2004年Google启用搜索数据到2024年各个热门FPS游戏的搜索指数，可以从侧面反映这些游戏的热度。我们可以清晰的发现在2011年以前作为单机FPS的长老级别的游戏CoD一直保持很高的人气,在2012-2014阶段，DAYZ作为大逃杀游戏的雏形表现不错的人气，而在2014-2017年，作为一款特别具有竞技性的团队战术游戏CSGO在CS1.6的基础上横空问世得到人们的青睐，2016-2017年是守望先锋（overwatch）的时代，2018年问世的堡垒之夜（fontnite）一炮开红，随即一发不可收拾，一直位居热度榜的高位，就连2018年同为黑马的PUBG大逃杀游戏也不能和他平起平坐。</p>
     <head>
     <meta charset="utf-8">
     <!-- 引入 ECharts 文件 -->
@@ -231,10 +232,24 @@
         // 使用刚指定的配置项和数据显示图表。
         myChart.setOption(option);
     </script>
+    <div>
+        <iframe src="dataset-link.html" style="width: 100%; height: 800px; border: none;"></iframe>
+    </div>
 </div>
 
+<div>
+    <h1 class="title2">PART2：Steam主流FPS游戏每月平均在线人数</h1>
+    
+    <p class = "body-text">本部分数据来自于STEAM游戏平台最大的数据库SteamDB提供，它记录了每个在Steam上架游戏每个时刻的在线人数，我们通过将得到的数据平均处理，得到了不同具有代表性FPS游戏的每月平均在线人数，您可以通过将鼠标停留在折线图的不同位置来观察这个时间段每个游戏在线人数占比。</p>
+    <p class = "body-text">注：部分非Steam经典游戏未参与统计</p>
+    <div>
+        <iframe src="csgoplayer.html" style="width: 100%; height: 800px; border: none;"></iframe>
+    </div>
+    </div>
+
 <div class = "map">
-  <h1 class="title2">CSGO各国战队个数</h1>
+  <h1 class="title2">PART3：CSGO各国战队个数</h1>
+  <p class = "body-text">太美丽了理塘，但是我们还是放眼一望全球CSGO职业战队的分布情况啊，本数据来自于2018年Major比赛的战队统计数据，您可以将鼠标停留在任何一个国家来查看他所拥有的战队个数。粗略观察完我可以得出结论：作为CSGO的起源地北欧，战队数量不出所料很多，但是美国的战队是出乎意料的多，比如Faze就来自这里；在南美巴西展现了对这款游戏独一无二的爱，爱来自黑豹Flora；俄罗斯和乌克兰是电竞大国，比如VP、Navi都是他们的名将；中国的Tyloo一枝独秀；而日本人是真玩不来CSGO，都滚去玩Apex当南通了。</p>
 <script src="https://cdn.jsdelivr.net/npm/echarts@5.3.2/dist/echarts.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/echarts/map/js/world.js"></script>
 <style>
@@ -673,12 +688,21 @@ chart.setOption(option);
 </div>
 
 <div>
-  <h1 class="title2">CSGO职业选手力导向</h1>
+  <h1 class="title2">PART4:CSGO职业选手力导向</h1>
+  <p class = "body-text">这张图就比较有意思了，原始数据来自于2022年职业选手战绩数据的统计表，我通过链表将同一个国家的选手都连接在一起，并通过击杀比、击杀数、地图数等等整合在一起的彰显实力的参数作为力的量化，用于排斥不同国家的选手和吸引同一个国家的选手，往往位于一个族簇中心的选手就代表这个国家选手中的冉冉之星，您可以将鼠标悬停在小点上来看看他们都有谁。</p>
   <iframe src="graph-webkit-dep.html" style="width: 100%; height: 800px; border: none;"></iframe>
 </div>
-  
+
+<div class="weapon">
+<h1 class="title2">PART5:CS:GO武器数据雷达图</h1>
+<p class = "body-text">这个雷达图统计了官方的武器数据，通过价格、弹夹、后坐力、DPS、伤害等多维度数据通过雷达图展现一个武器的综合性能，您可以在图例中通过点击选取多个武器进行对比，快来看看那些武器的性价比是最高的呢？</p>
+<iframe src="./weapon/radar.html" style="width: 100%; height: 800px; border: none;"></iframe>
+
+    </div>
+
 <div class="vis2">
-  <h1 class="title2">CS:GO被害者热力图</h1>
+  <h1 class="title2">PART6:被害者热力图</h1>
+  <p class = "body-text">这是本次数据可视化项目最有趣的部分，我从esea平台（EASA依然在筹划举办Major，但是它自家的对战平台却早早做垮了，所以我得到了很大一份对战平台的击杀记录数据，上面记录了击杀者、被击杀者的坐标，使用的武器，造成的伤害）获取拥有几百万条击杀记录的数据表，对于不同的地图、不同的武器进行分类，对被击杀者的死亡坐标进行统计，在游戏地图为底图的缩放坐标系上绘制散点图，结果不仅仅有趣味性，而且对战术具有参考价值，您可以根据我的可视化结果学习哪里是老六最喜欢的伏击地点，从而在实战中提高警惕，减少被伏击概率。</p>
   <div class="container">
   
     <div id="imageContainer">
@@ -704,6 +728,7 @@ chart.setOption(option);
       <button class="button" onclick="showScatter('flash')">Flash</button>
     </div>
   </div>
+  <p class = "body-text">先选取地图，再在子按钮选取击杀武器：例如HE:手雷</p>
 </div>
 
 </body>

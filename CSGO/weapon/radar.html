@@ -1,0 +1,321 @@
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    #container {
+      height: 80%;
+    }
+    #legend {
+      height: 20%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+    }
+    .legend-item img {
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 80%;"></div>
+  <div id="legend" style="height: 20%; display: flex; justify-content: center; align-items: center;"></div>
+
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/5.5.0/files/dist/echarts.min.js"></script>
+  
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var legendDom = document.getElementById('legend');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+    option = {
+      title: {
+        text: 'Weapon Stats',
+      },
+      legend: {
+        orient: 'vertical', 
+        top: '10%', 
+        left: '1%', 
+        itemGap: 20, 
+        pageMode: 'scroll', 
+        pageButtonGap: 10, 
+        data: [
+          "AK-47", "AUG", "AWP", "CZ75-Auto", "Desert-Eagle", "Dual-Berettas", 
+          "FAMAS", "Five-SeveN", "G3SG1", "Galil-AR", "Glock-18", "M249", 
+          "M4A4", "M4A4-S", "MAC-10", "MAG-7", "MP7", "MP9", "Negev", 
+          "Nova", "P2000", "P250", "P90", "PP-Bizon", "Sawed-Off", 
+          "SCAR-20", "SG-553", "SSG-08", "Tec-9", "UMP-45", "USP-S", "XM1014"
+        ],
+        selectedMode: 'multiple', 
+        selected: {
+          "AK-47": true ,// 默认第一个图例被选中
+          "AUG":false,
+          "AWP":false,
+          "CZ75-Auto":false,
+          "Desert-Eagle":false,
+          "Dual-Berettas":false,
+          "FAMAS":false,
+          "Five-SeveN":false,
+          "G3SG1":false,
+          "Galil-AR":false,
+          "Glock-18":false,
+          "M249":false,
+          "M4A4":false,
+          "M4A4-S":false,
+          "MAC-10":false,
+          "MAG-7":false,
+          "MP7":false,
+          "MP9":false,
+          "Negev":false,
+          "Nova":false,
+          "P2000":false,
+          "P250":false,
+          "P90":false,
+          "PP-Bizon":false,
+          "Sawed-Off":false,
+          "SCAR-20":false,
+          "SG-553":false,
+          "SSG-08":false,
+          "Tec-9":false,
+          "UMP-45":false,
+          "USP-S":false,
+          "XM1014":false
+        },
+      },
+      textStyle: {
+        rich: {
+          title: {
+            fontSize: 12,
+            padding: [0, 5, 0, 0],
+            lineHeight: 30,
+          }
+        },
+      },
+  
+      radar: {
+        shape: 'circle',
+        indicator: [
+          { "name": "Cost", "max": 5700 },
+          { "name": "Max Speed", "max": 240 },
+          { "name": "Damage", "max": 115 },
+          { "name": "DPS", "max": 583 },
+          { "name": "Clip Size", "max": 150 },
+          { "name": "Reload (FR)", "max": 5.73 },
+          { "name": "Recoil", "max": 165 },
+          { "name": "Spread", "max": 62 }
+        ]
+      },
+      series: [
+        {
+          name: 'Weapon Stats',
+          type: 'radar',
+      data: [
+    {
+        "value": [2700, 215, 36, 360, 30, 2.5, 30.0, 0.6],
+        "name": "AK-47"
+    },
+    {
+        "value": [3300, 220, 28, 311, 30, 3.8, 26.0, 0.5],
+        "name": "AUG"
+    },
+    {
+        "value": [4750, 200, 115, 79, 10, 3.7, 78.0, 0.2],
+        "name": "AWP"
+    },
+    {
+        "value": [500, 240, 33, 300, 12, 2.9, 27.0, 3.0],
+        "name": "CZ75-Auto"
+    },
+    {
+        "value": [700, 230, 63, 280, 7, 2.3, 48.2, 2.0],
+        "name": "Desert-Eagle"
+    },
+    {
+        "value": [500, 240, 38, 317, 30, 3.82, 27.0, 2.0],
+        "name": "Dual-Berettas"
+    },
+    {
+        "value": [2250, 220, 30, 333, 25, 3.35, 20.0, 0.6],
+        "name": "FAMAS"
+    },
+    {
+        "value": [500, 240, 32, 213, 20, 2.3, 25.0, 2.0],
+        "name": "Five-SeveN"
+    },
+    {
+        "value": [5000, 215, 80, 320, 20, 4.7, 30.0, 0.3],
+        "name": "G3SG1"
+    },
+    {
+        "value": [2000, 215, 30, 333, 35, 3.05, 21.0, 0.6],
+        "name": "Galil-AR"
+    },
+    {
+        "value": [200, 240, 28, 187, 20, 2.3, 18.0, 2.0],
+        "name": "Glock-18"
+    },
+    {
+        "value": [5200, 195, 32, 400, 100, 5.73, 25.0, 2.0],
+        "name": "M249"
+    },
+    {
+        "value": [3100, 225, 33, 367, 30, 3.15, 23.0, 0.6],
+        "name": "M4A4"
+    },
+    {
+        "value": [3100, 225, 33, 367, 20, 3.15, 25.0, 0.6],
+        "name": "M4A4-S"
+    },
+    {
+        "value": [1050, 240, 29, 387, 30, 2.6, 18.0, 1.0],
+        "name": "MAC-10"
+    },
+    {
+        "value": [1800, 225, 30, 282, 5, 2.5, 165.0, 40.0],
+        "name": "MAG-7"
+    },
+    {
+        "value": [1700, 220, 29, 363, 30, 3.15, 16.0, 0.77],
+        "name": "MP7"
+    },
+    {
+        "value": [1250, 240, 26, 371, 30, 2.25, 19.0, 0.75],
+        "name": "MP9"
+    },
+    {
+        "value": [5700, 195, 35, 583, 150, 5.73, 22.0, 2.0],
+        "name": "Negev"
+    },
+    {
+        "value": [1200, 220, 26, 266, 8, 0.0, 143.0, 40.0],
+        "name": "Nova"
+    },
+    {
+        "value": [200, 240, 35, 206, 13, 2.3, 26.0, 2.0],
+        "name": "P2000"
+    },
+    {
+        "value": [300, 240, 35, 233, 13, 2.3, 26.0, 2.0],
+        "name": "P250"
+    },
+    {
+        "value": [2350, 230, 26, 371, 50, 3.4, 16.0, 1.0],
+        "name": "P90"
+    },
+    {
+        "value": [1400, 240, 27, 338, 64, 2.5, 18.0, 1.0],
+        "name": "PP-Bizon"
+    },
+    {
+        "value": [1200, 210, 32, 301, 7, 0.0, 143.0, 62.0],
+        "name": "Sawed-Off"
+    },
+    {
+        "value": [5000, 215, 80, 320, 20, 3.1, 31.0, 0.3],
+        "name": "SCAR-20"
+    },
+    {
+        "value": [3000, 210, 30, 333, 30, 2.8, 28.0, 0.5],
+        "name": "SG-553"
+    },
+    {
+        "value": [1700, 230, 88, 70, 10, 3.7, 33.0, 0.28],
+        "name": "SSG-08"
+    },
+    {
+        "value": [500, 240, 33, 275, 32, 2.7, 23.0, 2.0],
+        "name": "Tec-9"
+    },
+    {
+        "value": [1200, 230, 35, 389, 25, 3.5, 23.0, 1.0],
+        "name": "UMP-45"
+    },
+    {
+        "value": [200, 240, 35, 206, 12, 2.5, 29.0, 2.5],
+        "name": "USP-S"
+    },
+    {
+        "value": [2000, 215, 20, 343, 7, 4.2, 80.0, 38.0],
+        "name": "XM1014"
+    }
+      ],
+      areaStyle: {
+        color: 'rgba(50, 50, 250, 0.3)',},
+   },
+  ],
+  tooltip: {
+    trigger: 'item',
+    position: 'bottom', // 设置 tooltip 位置为鼠标上方
+        confine: true, // 防止 tooltip 超出图表边界
+        formatter: function(params) {
+          var legendName = params.name;
+          var dataItem = option.series[0].data.find(item => item.name === legendName);
+          if (dataItem) {
+              var imageUrl = `./images/${legendName.toLowerCase().replace(/[^a-z0-9-]/g, "")}.png`; // 图片路径
+              var tooltipContent = `
+                  <div style="padding: 10px;">
+                      <p>${legendName}</p>
+                      <img src="${imageUrl}" style="width: 100px; height: 100px;">
+                      <p>Cost: ${dataItem.value[0]}</p>
+                      <p>Max Speed: ${dataItem.value[1]}</p>
+                      <p>Damage: ${dataItem.value[2]}</p>
+                      <p>DPS: ${dataItem.value[3]}</p>
+                      <p>Clip Size: ${dataItem.value[4]}</p>
+                      <p>Reload (FR): ${dataItem.value[5]}</p>
+                      <p>Recoil: ${dataItem.value[6]}</p>
+                      <p>Spread: ${dataItem.value[7]}</p>
+                  </div>
+              `;
+              return tooltipContent;
+          }
+          return ''; // 如果没有对应数据，则返回空字符串
+      },
+},
+  color: ['#5470c6', '#91cc75', '#fac858', '#ee6666', '#73c0de', '#3ba272', '#fc8452', '#9a60b4', '#ea7ccc', '#3d96ff', '#d98585', '#52bacc', '#dba272', '#53bccc', '#f98552', '#a860b4', '#ba7cec', '#d85c5c', '#52cc8a', '#cc523d', '#a860b4', '#ba7ccc', '#53bccc', '#a860b4', '#d85c5c', '#52cc8a', '#cc523d', '#a860b4', '#ba7cec', '#53bccc', '#a860b4', '#d85c5c']
+};
+
+if (option && typeof option === 'object') {
+  myChart.setOption(option);
+}
+
+window.addEventListener('resize', myChart.resize);
+
+// 添加鼠标悬停事件监听
+myChart.on('legend:mouseenter', function(params) {
+  var legendName = params.name;
+  var dataItem = option.series[0].data.find(item => item.name === legendName);
+  if (dataItem) {
+    var imageUrl = `./images/${legendName.toLowerCase()}.png`; // 图片路径
+    console.log(imageUrl);
+    var imageElement = document.createElement('img');
+    imageElement.src = imageUrl;
+    weaponImageDom.innerHTML = ''; // 清空内容
+    weaponImageDom.appendChild(imageElement);
+
+  }
+});
+
+// 添加鼠标离开事件监听
+myChart.on('legend:mouseleave', function() {
+  weaponImageDom.innerHTML = ''; // 清空内容
+});
+
+
+</script>
+</body>
+</html>
