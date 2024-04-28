@@ -266,7 +266,7 @@
           var legendName = params.name;
           var dataItem = option.series[0].data.find(item => item.name === legendName);
           if (dataItem) {
-              var imageUrl = `./images/${legendName.toLowerCase().replace(/[^a-z0-9-]/g, "")}.png`; // 图片路径
+              var imageUrl = `./${legendName.toLowerCase().replace(/[^a-z0-9-]/g, "")}.png`; // 图片路径
               var tooltipContent = `
                   <div style="padding: 10px;">
                       <p>${legendName}</p>
